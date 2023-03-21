@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div id="info">
+        <h1>Cash Register</h1>
+        <p>Cash Register is a digital register for cash transaction for any purchase.It accepts purchase price, cash
+            paid(cash paid by buyer to seller), cash in drawer(cash with the buyer) as its input. Depending on the cash
+            in drawer, it provides status and exact denominations of the cash(change) to be returned </p>
+
+
+        <ul id="status-details">
+            <li>
+                <p><span class="bold-tag">Status: CASH COUNTER OPEN</span> ,
+                    <br>Change to be returned < cash counter balance <br>Open for next transaction, Positive balance
+                </p>
+
+            </li>
+            <li>
+                <p><span class="bold-tag">Status: CASH COUNTER CLOSED</span> ,
+                    <br>Change to be returned = cash counter balance
+                    <br>Closed for next transaction, Zero balance
+                </p>
+
+            </li>
+            <li>
+                <p><span class="bold-tag">Status: INSUFFICIENT FUNDS</span> ,
+                    <br> Change to be returned > cash counter balance
+                    <br>OR specific currency not available to change
+                </p>
+
+            </li>
+        </ul>
+        <ul id="trial-btn">
+            <li>
+                <a href="#output"><br><button type="button" id="open-sample" class="btn">Check Sample
+                        Data-Counter Open</button></a>
+            </li>
+            <li>
+                <a href="#output"><br><button type="button" id="close-sample" class="btn">Check Sample
+                        Data-Counter
+                        Closed</button></a>
+            </li>
+            <li>
+                <a href="#output"><br><button type="button" id="insuft-sample" class="btn">Check
+                        Sample
+                        Data-Insufficient
+                        Funds</button></a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="input-output">
+        <div id="input">
+            <p class="bold-tag font-big">Feed your own numbers and try the cash counter</p>
+
+            <form>
+                <div id="price-div">
+                    <label for="price">Purchase Price(in $)</label>
+                    <input type="number" min="0" max="10000" step="0.01" id="price" required value="19.50">
+                    <span class="validity"></span>
+                </div>
+                <div id="paid-div">
+                    <label for="cash-paid">Cash Paid(in $)</label>
+                    <input type="number" min="0" max="10000" step="0.01" id="cash-paid" required value="20.00"> <span
+                        class="validity"></span>
+                </div>
+                <div>
+                    <table id="input-table">
+                        <caption class="bold-tag font-big">
+                            Total Cash in Drawer
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Currency</th>
+                                <th>Value(in$)</th>
+                                <th>Count of currency</th>
+                                <th>Total Value(in$)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Penny</th>
+                                <td>0.01</td>
+                                <td><label for="penny-num"></label>
+                                    <input type="number" min="0" max="1000" id="penny-num" step="1" required
+                                        value="100">
+                                    <span class="validity"></span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Nickel</th>
+                                <td>0.05</td>
+                                <td><label for="nickel-num"></label>
+                                    <input type="number" min="0" max="1000" step="1" id="nickel-num" required
+                                        value="100">
+                                    <span class="validity"></span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Dime</th>
+                                <td>0.1</td>
+                                <td><label for="dime-num"></label>
+                                    <input type="number" min="0" max="1000" step="1" id="dime-num" required value="100">
+                                    <span class="validity"></span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Quarter</th>
+                                <td>0.25</td>
+                                <td><label for="quarter-num"></label>
+                                    <input type="number" min="0" max="1000" step="1" id="quarter-num" required
+                                        value="100">
+                                    <span class="validity"></span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Dollar</th>
+                                <td>1</td>
+                                <td><label for="dollar-num"></label>
+                                    <input type="number" min="0" max="1000" step="1" id="dollar-num" required
+                                        value="100">
+                                    <span class="validity"></span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Five Dollars</th>
+                                <td>5</td>
+                                <td><label for="five-dollars-num"></label>
+                                    <input type="number" min="0" max="1000" step="1" id="five-dollars-num" required
+                                        value="50"> <span class="validity"></span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Ten Dollars</th>
+                                <td>10</td>
+                                <td><label for="ten-dollars-num"></label>
+                                    <input type="number" min="0" max="1000" step="1" id="ten-dollars-num" required
+                                        value="20"> <span class="validity"></span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Twenty Dollars</th>
+                                <td>20</td>
+                                <td><label for="twenty-dollars-num"></label>
+                                    <input type="number" min="0" max="1000" step="1" id="twenty-dollars-num" required
+                                        value="20"> <span class="validity"></span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Hundred Dollars</th>
+                                <td>100</td>
+                                <td><label for="hundred-dollars-num"></label>
+                                    <input type="number" min="0" max="1000" step="1" id="hundred-dollars-num" required
+                                        value="10"> <span class="validity"></span>
+                                </td>
+                                <td></td>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="bold-tag">Total Cash</td>
+                                <td id="cash"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+
+                <button type="submit" id="input-submit" class="btn resub">Submit</button>
+                <button type="reset" id="input-reset" class="btn resub">Reset Data</button>
+
+
+            </form>
+
+        </div>
+
+        <div id="filler">
+
+
+            <i class="fa-solid fa-money-check-dollar fa-li-width dollar"></i><i class="fa-solid fa-coins coins"></i>
+            <p>Cash in Drawer<br>Output</p>
+
+        </div>
+
+        <div id="output">
+            <p id="output-status"></p>
+            <ul id="output-list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <table id="output-table">
+                <thead>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

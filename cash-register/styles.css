@@ -1,0 +1,287 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px;
+    color: darkslategrey;
+    background-color: mintcream;
+   
+
+
+}
+
+h1 {
+    text-align: center;
+    margin: 0px;
+    height: auto;
+    line-height: 50px;
+}
+
+
+h1~p {
+    margin: 0px auto;
+    text-align: justify;
+    line-height: 25px;
+    padding: 5px 20px;
+    background-color: ghostwhite;
+    font-weight: bold;
+    min-width: 300px;
+
+}
+
+
+#status-details,
+#trial-btn {
+    background-color: ghostwhite;
+    display: flex;
+    margin: 0px;
+    border-left: 5px solid darkgray;
+    border-right: 5px solid darkgray;
+    padding-left: 0px;
+    flex-shrink: 300px;
+    color: dimgray;
+    min-width: 500px;
+
+}
+
+
+
+#status-details>li,
+#trial-btn>li {
+    border: 5px solid darkgray;
+    text-align: center;
+    list-style: none;
+    width: 33vw;
+    padding: 2vw;
+}
+
+#trial-btn>li {
+    padding-top: 1vh;
+    border-top: 0px;
+    border-bottom: 10px solid darkgray;
+}
+
+#status-details>li {
+    border-bottom: 0px;
+    padding-bottom: 1vh;
+    border-top: 10px solid darkgray;
+}
+
+
+#status-details>li>p {
+    margin-bottom: 0px;
+    line-height: 20px;
+}
+
+.btn {
+    margin-top: 0px;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    border: 7px solid darkgray;
+    border-radius: 50px;
+    background-color: white;
+
+}
+
+.resub {
+    padding: 5px 20px;
+    text-align: center;
+    margin: 15px 40px;
+    font-size: 1.2rem;
+
+}
+
+.btn:hover {
+    color: white;
+    background-color: darkgray;
+    font-weight: bold;
+    border: 5px solid white;
+    border-style: double;
+}
+
+form {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#input-output {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: mintcream;
+
+
+}
+
+.bold-tag {
+    font-weight: bold;
+}
+
+.font-big {
+    font-size: 18px;
+}
+
+tbody tr th {
+    font-weight: lighter;
+}
+
+#input {
+    border: 5px solid darkgray;
+    background-color: #def2f1;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#input-table {
+    margin: 1px auto;
+}
+
+#input-table>thead>tr>th,
+#input-table>tbody>tr>th,
+#input-table>tbody>tr>td,
+tfoot>tr>td {
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px 5px;
+    font-size: 1rem;
+    color: white;
+    background-color: darkgray;
+    font-weight: bold;
+}
+
+
+#input p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1px;
+    min-width: 400px;
+}
+
+#price-div,
+#paid-div {
+    margin: 15px auto;
+    display: inline-block;
+
+}
+
+form {
+    font-size: 1rem;
+}
+
+caption {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100px;
+
+}
+
+#output {
+    display: none;
+}
+
+#output-status {
+    margin: 2px auto;
+}
+
+
+#output-list>li {
+    list-style: none;
+    margin-left: 1.5em;
+}
+
+
+input:valid+span::after {
+    content: "✓";
+    padding: 5px;
+}
+
+input:invalid+span::after {
+    content: "✖";
+    padding: 5px;
+}
+
+
+#filler {
+    border: 5px solid darkgray;
+    background-color: #def2f1;
+
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-basis: 45vw;
+    color: black;
+    position: relative;
+}
+
+#filler p {
+    color: darkslategray;
+    text-align: center;
+    font-size:xx-large;
+    font-weight: bold;
+    flex-shrink: 1;
+    
+
+
+
+}
+
+#blank {
+
+    min-width: 400px;
+}
+.fa-solid {
+    transform: scale(11);
+    color: darkgray;
+
+}
+
+.fa-li-width {
+    width: -1vw;
+}
+
+.dollar {
+    position: absolute;
+    top: 60%;
+    left: 25%;
+
+
+}
+
+.coins {
+    position: absolute;
+    top: 60%;
+    right: 25%;
+}
+
+@media screen and (max-width: 958px) {
+
+    #input-output {
+        flex-direction: column;
+    }
+
+    #filler {
+        height: 400px;
+    }
+    .fa-solid {
+        transform: scale(8);
+     
+    
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .fa-solid{
+        transform: scale(4)
+    }
+    #filler p {
+        font-size:medium;
+    }
+}
