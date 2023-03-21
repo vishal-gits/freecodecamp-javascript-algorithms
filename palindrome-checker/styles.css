@@ -1,0 +1,46 @@
+body{
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0px;
+    
+}
+h1,h2{
+    color: #1a0dab;
+}
+ul{
+    display: inline-block;
+    text-align: left;
+    color: #4d5156;
+}
+
+p{
+    max-width: 700px;
+    margin: 15px auto;
+    color: #4d5156;
+}
+
+form{
+    border: 1px solid #4d5156;
+    border-left: 0px;
+    border-right: 0px;
+    height: 60px;
+    background-color: #f9eae6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+input{
+    width: 250px;
+    height: 30px;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #4d5156
+
+}
+button{
+    height: 30px;
+    width: 75px;
+    
+}
