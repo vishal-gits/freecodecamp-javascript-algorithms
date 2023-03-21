@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caesers Cipher</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+
+  <h1>Caesers Cipher</h1>
+    <h2>What is Caesers Cipher?</h2>
+    <p>Caesars cipher,is one of the simplest and most widely known encryption techniques.</p>
+  
+  <div id="intro">
+    <p>Caesers Cipher is a type of substitution
+      cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the
+      alphabet.<br>For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. <a
+        href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesers Cipher</a>
+    <p>A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places.<br>Two
+      successive applications of ROT13 restores the original text <br>You can find more information on wikipedia page of
+      <a href="https://en.wikipedia.org/wiki/ROT13">ROT13</a>
+    </p>
+
+  </div>
+
+  <table id="examples">
+    <caption>
+      Some Examples of Caesers Cipher
+    </caption>
+    <thead>
+      <th>Cipher</th>
+      <th>Expression</th>
+      <th>It's Caesers Cipher</th>
+    </thead>
+    <tr>
+      <th>Encrypt</th>
+      <td>Never odd or even</td>
+      <td>Arire bqq be rira</td>
+    </tr>
+    <tr>
+      <th>Decrypt</th>
+      <td>Arire bqq be rira</td>
+      <td>Never odd or even</td>
+    </tr>
+    <tr>
+      <th>Encrypt</th>
+      <td>Red roses run no risk, sir, on Nurse's order</td>
+      <td>Erq ebfrf eha ab evfx, fve, ba Ahefr'f beqre</td>
+    </tr>
+    <tr>
+      <th>Decrypt</th>
+      <td>Erq ebfrf eha ab evfx, fve, ba Ahefr'f beqre</td>
+      <td>Red roses run no risk, sir, on Nurse's order</td>
+    </tr>
+    <tr>
+      <th>Encrypt</th>
+      <td>The sky is clear, so go for a morning walk</td>
+      <td>Gur fxl vf pyrne, fb tb sbe n zbeavat jnyx</td>
+    </tr>
+    <tr>
+      <th>Decrypt</th>
+      <td>Gur fxl vf pyrne, fb tb sbe n zbeavat jnyx</td>
+      <td>The sky is clear, so go for a morning walk</td>
+    </tr>
+  </table>
+
+  <div id="output">
+    <p>Enter an expression to Encrypt/Decrypt</p>
+
+    <table>
+      <tr>
+        <td>Expression</td>
+        <td></td>
+        <td>Encrypted Output</td>
+      </tr>
+      <tr>
+        <td><input type="text" id="enc-input" placeholder="Enter the expression to be encrypted"></td>
+        <td><button type="button" id="enc-btn">Encrypt &rarr;</button></td>
+        <td><input type="text" id="enc-output" placeholder="Encrypted Output" disabled></td>
+      </tr>
+      <tr>
+        <td>Expression</td>
+        <td></td>
+        <td>Decrypted</td>
+      </tr>
+      <tr>
+        <td><input type="text" id="dec-input" placeholder='Copy and paste from "Encrypted Output" box'></td>
+        <td><button type="button" id="dec-btn">Decrypt &rarr;</button></td>
+        <td><input type="text" id="dec-output" placeholder="Decrypted Output" disabled></td>
+      </tr>
+
+    </table>
+
+    <button type="button" id="reset-btn">Reset</button>
+
+
+  </div>
+
+</body>
+
+</html>

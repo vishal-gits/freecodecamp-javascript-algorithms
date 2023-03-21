@@ -1,0 +1,141 @@
+
+body{
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0px;
+    background-color: #52ffca;
+    color: brown;
+    
+ 
+}
+h1,h2{
+    color: #1a0dab;
+    margin: 0px;
+    background-color: red;
+    color: yellow;
+}
+h2~p{
+    margin: 0px auto;
+    padding: 10px;
+    background-color: #add8e6;
+    color: darkblue;
+}
+
+
+#intro{
+    display: flex;
+    margin: 0px auto;
+
+}
+
+#intro p{
+    flex-basis: 45vw;
+    
+    text-align: justify;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 2vh;
+    line-height: 1.4rem;
+    margin: 0px auto;
+    background-color: #add8e6;
+    color: darkblue;
+}
+
+caption{
+    font-weight: bold;
+    font-size: large;
+}
+
+#examples{
+    margin: 5vh auto;
+    line-height: 25px;
+    
+}
+
+#examples th, #examples td{
+    padding: 1px 15px;
+    border: 2px solid brown;
+    border-radius: 5px;;
+    
+}
+
+
+caption{
+    margin-bottom: 20px;;
+}
+
+
+#output{
+    
+    height: 50vh;
+    background-color: darkslategrey;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#reset-btn{
+    margin: 20px auto;
+}
+
+#output p{
+    margin: 5px auto;
+    padding: 0px;
+}
+
+#output-table{
+    margin-top: 10px;
+    padding: 0px;
+    width: 70vw;
+    height: 40vh;
+
+
+}
+
+
+
+input{
+    width: 30vw;
+    /* width: auto; */
+    min-width: 50px;
+    height: 5vh;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #4d5156;
+    font-size: 20px;
+    
+
+}
+button{
+    height: 30px;
+    width: 100px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#enc-output,#dec-output{
+    background-color: white;
+    color: darkslategrey;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    darkslategrey;
+    font-size:20px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    darkslategrey;
+   font-size:20px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    darkslategrey;
+   font-size:20px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    darkslategrey;
+   font-size:20px;
+}
+
+
+
