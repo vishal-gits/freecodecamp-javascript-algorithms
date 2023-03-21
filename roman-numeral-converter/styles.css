@@ -1,0 +1,14 @@
+input:valid+span::after {
+    content: "";
+    padding: 5px;
+    display: inline;
+}
+
+input:invalid+span::after {
+    content: "Please Enter less than 3999";
+    border: 5px solid red;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 5px;
+    display: inline-block;
+}
