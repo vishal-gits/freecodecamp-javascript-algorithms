@@ -21,6 +21,20 @@ h2~p{
     color: darkblue;
 }
 
+#jumpbtn{
+    width: 300px;
+    margin: 10px;
+    background-color: brown;
+    color: white;
+    
+}
+
+#jumpbtn:hover{
+    background-color: white;
+    color: brown;
+    border: 2px solid brown;
+}
+
 
 #intro{
     display: flex;
@@ -136,6 +150,5 @@ button{
     color:    darkslategrey;
    font-size:20px;
 }
-
 
 
