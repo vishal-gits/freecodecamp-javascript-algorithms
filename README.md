@@ -8,7 +8,7 @@ Additionally I have implemented the html and css files for the projects in this 
 
 ### Project Live Link - https://vishal-gits.github.io/freecodecamp-javascript-algorithms/
 
-Details- Below are the details of the 5 projects
+### Details- Below are the details of the 5 projects
 
 1- Palindrome Checker - To check whether a particular expression is a Plaindrome.
 
